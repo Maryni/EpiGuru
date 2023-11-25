@@ -18,7 +18,7 @@ public class Data : MonoBehaviour
 
     public static Data instance = null;
 
-    void Awake()
+    void Start()
     {
         if (instance == null)
         {

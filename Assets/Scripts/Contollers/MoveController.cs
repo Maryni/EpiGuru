@@ -26,12 +26,12 @@ public class MoveController : MonoBehaviour
     private void Move(GameObject target)
     {
         Rigidbody rb = target.GetComponent<Rigidbody>();
-        rb.AddForce(velocity, ForceMode.Acceleration);
-        Debug.Log($"complete, speed = {speed}");
+        rb.AddForce(velocity, ForceMode.Force);
     }
 
     private void SetVelocity()
     {
+        GetData();
         velocity = Vector3.forward * Time.deltaTime * speed;
     }
 
