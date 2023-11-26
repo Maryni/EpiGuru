@@ -14,6 +14,7 @@ public class LocationController : MonoBehaviour
         string countryCode = GetCountry(ipAddress);
 
         Debug.Log("Country: " + countryCode);
+        Data.instance.DynamicData.LocationData.CountryCode = countryCode;
     }
 
     private string GetIPAddress()

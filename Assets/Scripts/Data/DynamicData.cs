@@ -11,6 +11,7 @@ public class DynamicData
     [SerializeField] private SoundData soundData;
     [SerializeField] private MoveData moveData;
     [SerializeField] private PointData pointData;
+    [SerializeField] private LocationData locationData;
 
     #endregion variables
 
@@ -21,6 +22,7 @@ public class DynamicData
     public SoundData SoundData => soundData;
     public MoveData MoveData => moveData;
     public PointData PointData => pointData;
+    public LocationData LocationData => locationData;
 
     #endregion properties
 }
@@ -51,6 +53,12 @@ public class PointData
 {
     public List<GameObject> Points;
     public List<GameObject> CubesOnPoints;
+}
+
+[Serializable]
+public class LocationData
+{
+    public string CountryCode;
 }
 
 #endregion Serializable classes
