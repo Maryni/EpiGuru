@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 5302840365386451892}
   - component: {fileID: 5302840365386451893}
   - component: {fileID: 5302840365386452042}
-  - component: {fileID: 1344626535030105904}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -55,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 0}
+  deathPanel: {fileID: 0}
   pauseButton: {fileID: 0}
   coinText: {fileID: 0}
 --- !u!114 &5302840365386452041
@@ -177,16 +177,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 5302840365386452046}
---- !u!114 &1344626535030105904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302840365386452045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b17088e266f5974b8fb43411c85f2ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}

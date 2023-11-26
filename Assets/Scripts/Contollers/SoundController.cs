@@ -20,9 +20,11 @@ public class SoundController : MonoBehaviour
     
     public void SetSound(List<GameObject> targets, SoundType soundType)
     {
-        for (int i = 0; i < targets.Count; i++)
+        GetData();
+        
+        foreach (var temp in targets)
         {
-            targets[i].GetComponent<AudioSource>().clip = sounds[soundType];
+            temp.GetComponent<AudioSource>().clip = sounds[soundType];
         }
     }
 
@@ -30,10 +32,10 @@ public class SoundController : MonoBehaviour
 
     #region private functions
 
-    private void Start()
-    {
-        GetData();
-    }
+    // private void Start()
+    // {
+    //     GetData();
+    // }
 
     private void GetData()
     {

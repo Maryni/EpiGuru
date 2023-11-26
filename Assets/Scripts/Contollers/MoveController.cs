@@ -26,6 +26,12 @@ public class MoveController : MonoBehaviour
     private void Move(GameObject target)
     {
         Rigidbody rb = target.GetComponent<Rigidbody>();
+        
+        if (target.GetComponent<PlayerController>())
+        {
+            GetHorizontalVelocity();
+        }
+        
         rb.AddForce(velocity, ForceMode.Force);
     }
 
@@ -40,9 +46,16 @@ public class MoveController : MonoBehaviour
         speed = Data.instance.DynamicData.MoveData.Speed;
     }
 
-    private void Start()
+    // private void Start()
+    // {
+    //     GetData();
+    // }
+
+    private void GetHorizontalVelocity()
     {
-        GetData();
+        Vector2 pos = new Vector2();
+        float horizontal = Input.GetAxis("Horizontal");
+        velocity.x = velocity.x + horizontal;
     }
 
     #endregion private functions

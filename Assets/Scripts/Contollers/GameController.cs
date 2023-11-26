@@ -20,8 +20,9 @@ public class GameController : MonoBehaviour
 
     private void SetActions()
     {
-        int value = Data.instance.DynamicData.CoinData.pickupValue;
-        playerController.onCoinPickup = () => uiController.SetCoinText(value.ToString());
+        //int value = ;
+        playerController.onCoinPickup = () => uiController.SetCoinText(Data.instance.DynamicData.CoinData.pickupValue.ToString());
+        playerController.onDeathTrigger = () => uiController.DeathScene();
     }
 
 

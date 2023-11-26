@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     #region variables
 
     public Action onCoinPickup;
+    public Action onDeathTrigger;
 
     #endregion variables
     
@@ -20,6 +21,14 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             Data.instance.DynamicData.CoinData.pickupValue++;
             onCoinPickup?.Invoke();
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            onDeathTrigger?.Invoke();
         }
     }
 

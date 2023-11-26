@@ -7,15 +7,20 @@ public class UIController : MonoBehaviour
     #region variables
 
     [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject coinText;
 
     #endregion variables
 
+    #region public functions
+
     public void SetCoinText(string value)
     {
         coinText.GetComponent<TMP_Text>().text = value;
     }
+
+    #endregion public functions
     
     #region Button functions
 
@@ -25,16 +30,36 @@ public class UIController : MonoBehaviour
     
     public void ResumeScene()
     {
-        Time.timeScale = 1f;
-        panel.SetActive(false);
-        pauseButton.SetActive(true);
+        TimeState(true);
+        SwitchButtons(false);
     }
 
     public void PauseScene()
     {
-        Time.timeScale = 0f;
-        panel.SetActive(true);
-        pauseButton.SetActive(false);
+        TimeState(false);
+        SwitchButtons(true);
+    }
+
+    public void DeathScene()
+    {
+        TimeState(false);
+        SwitchButtons(true, true);
+    }
+
+    private void SwitchButtons(bool value, bool needDeath = false)
+    {
+        if (needDeath)
+        {
+            deathPanel.SetActive(value);
+        }
+        else
+            panel.SetActive(value);
+        pauseButton.SetActive(!value);
+    }
+
+    private void TimeState(bool value)
+    {
+        Time.timeScale = value == false ? 0f : 1f;
     }
 
     #endregion Button functions

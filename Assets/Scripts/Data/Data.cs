@@ -18,7 +18,7 @@ public class Data : MonoBehaviour
 
     public static Data instance = null;
 
-    void Start()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -31,5 +31,14 @@ public class Data : MonoBehaviour
     }
 
     #endregion Singleton
+    
+    [ContextMenu("Rename Points")]
+    public void Rename()
+    {
+        for (int i = 0; i < dynamicData.PointData.Points.Count; i++)
+        {
+            dynamicData.PointData.Points[i].name = i.ToString();
+        }
+    }
     
 }
