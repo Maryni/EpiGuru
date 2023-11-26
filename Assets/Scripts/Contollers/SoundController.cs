@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +13,7 @@ public class SoundController : MonoBehaviour
 
     public void SetSound(GameObject target, SoundType soundType)
     {
+        GetData();
         target.GetComponent<AudioSource>().clip = sounds[soundType];
     }
     

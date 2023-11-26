@@ -23,8 +23,6 @@ public class DynamicData
     public PointData PointData => pointData;
 
     #endregion properties
-
-
 }
 
 #region Serializable classes

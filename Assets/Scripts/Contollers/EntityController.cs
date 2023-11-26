@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,8 +18,6 @@ public class EntityController : MonoBehaviour
         return coins;
     }
     
-    
-
     #endregion public functions
 
     #region private functions
@@ -29,8 +26,6 @@ public class EntityController : MonoBehaviour
     // {
     //     GetData();
     // }
-    
-    
 
     private void GetData()
     {
