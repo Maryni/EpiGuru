@@ -48,13 +48,13 @@ MonoBehaviour:
   dynamicData:
     coinData:
       Coins:
-      - {fileID: 0}
+      - {fileID: 4151765184663444712, guid: 4af681588a1109e44b28fcba93571fd3, type: 3}
       pickupValue: 0
     soundData:
       Clips:
       - {fileID: 8300000, guid: 9c842ae85dd23f949a2f1ebc8e88b251, type: 3}
     moveData:
-      Speed: 50
+      Speed: 40
     pointData:
       Points:
       - {fileID: 0}
@@ -105,6 +105,10 @@ MonoBehaviour:
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
+      CubesOnPoints:
+      - {fileID: 4328818469430519901, guid: fb1820d99a4a42649a30e1dc21a99f53, type: 3}
+      - {fileID: 4324782281664624622, guid: d2b628665cf22b44c9c10b86b67d4819, type: 3}
+      - {fileID: 4151765184663444712, guid: 4af681588a1109e44b28fcba93571fd3, type: 3}
 --- !u!114 &6210604060022274693
 MonoBehaviour:
   m_ObjectHideFlags: 0

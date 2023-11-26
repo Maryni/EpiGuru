@@ -30,8 +30,12 @@ public class MoveController : MonoBehaviour
         {
             GetHorizontalVelocity();
         }
+        else
+        {
+            velocity *= Random.Range(0.8f, 1.1f);
+        }
         
-        rb.AddForce(velocity, ForceMode.Force);
+        rb.AddForce(velocity, ForceMode.Acceleration);
     }
 
     private void SetVelocity()
@@ -54,7 +58,7 @@ public class MoveController : MonoBehaviour
     {
         Vector2 pos = new Vector2();
         float horizontal = Input.GetAxis("Horizontal");
-        velocity.x = velocity.x + horizontal;
+        velocity.x = velocity.x + (horizontal * 4f);
     }
 
     #endregion private functions

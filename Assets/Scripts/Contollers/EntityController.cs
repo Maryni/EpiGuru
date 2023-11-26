@@ -7,6 +7,7 @@ public class EntityController : MonoBehaviour
     
     private List<GameObject> coins; //will be replaced on ObjectPool when it needed
     private List<GameObject> points;
+    private List<GameObject> cubes;
 
     #endregion variables
 
@@ -27,10 +28,41 @@ public class EntityController : MonoBehaviour
     //     GetData();
     // }
 
+    public void SetCubesOnPoints()
+    {
+        GetData();
+
+        int row = 3;
+        var number = GetRandomNumber();
+        var diff = row - number;
+        for (int i = 0; i < points.Count; i++)
+        {
+            if (diff >0)
+            {
+                var newGameObject = Instantiate(cubes[GetRandomNumber() - 1], points[i].transform.position, Quaternion.identity);
+                newGameObject.transform.parent = points[i].transform;
+                diff--;
+            }
+            else
+            {
+                var newGameObject = Instantiate(cubes[2], points[i].transform.position, Quaternion.identity);
+                newGameObject.transform.parent = points[i].transform;
+                i = i + (row - number) + 1;
+                number = GetRandomNumber();
+                diff = row - number;
+            }
+        }
+    }
+
+    private int GetRandomNumber() => Random.Range(1, 3);
+
     private void GetData()
     {
-        coins = Data.instance.DynamicData.CoinData.Coins;
-        points = Data.instance.DynamicData.PointData.Points;
+        var data = Data.instance.DynamicData;
+        
+        coins = data.CoinData.Coins;
+        points = data.PointData.Points;
+        cubes = data.PointData.CubesOnPoints;
     }
 
     #endregion private functions

@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         SetActions();
-        soundController.SetSound(entityController.GetCoins(), SoundType.Coin);
+        entityController.SetCubesOnPoints();
     }
 
     private void SetActions()

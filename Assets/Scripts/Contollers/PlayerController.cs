@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public Action onCoinPickup;
     public Action onDeathTrigger;
+    [SerializeField] private AudioSource audioSource;
 
     #endregion variables
     
@@ -14,9 +15,9 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Coin>())
+        if (other.gameObject.layer == 7)
         {
-            other.GetComponent<Coin>().Play();
+            audioSource.Play();
             other.gameObject.SetActive(false);
             Data.instance.DynamicData.CoinData.pickupValue++;
             onCoinPickup?.Invoke();

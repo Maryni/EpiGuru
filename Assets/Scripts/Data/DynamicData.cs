@@ -50,6 +50,7 @@ public class MoveData
 public class PointData
 {
     public List<GameObject> Points;
+    public List<GameObject> CubesOnPoints;
 }
 
 #endregion Serializable classes

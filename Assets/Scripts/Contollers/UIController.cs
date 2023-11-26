@@ -46,6 +46,12 @@ public class UIController : MonoBehaviour
         SwitchButtons(true, true);
     }
 
+    public void EnableTime() => TimeState(true);
+
+    #endregion Button functions
+
+    #region private functions
+
     private void SwitchButtons(bool value, bool needDeath = false)
     {
         if (needDeath)
@@ -62,5 +68,5 @@ public class UIController : MonoBehaviour
         Time.timeScale = value == false ? 0f : 1f;
     }
 
-    #endregion Button functions
+    #endregion private functions
 }
