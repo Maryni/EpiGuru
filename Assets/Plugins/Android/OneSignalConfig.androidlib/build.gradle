@@ -11,9 +11,18 @@ android {
        consumerProguardFiles "consumer-proguard.pro"
    }
 
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     lintOptions {
         abortOnError false
     }
+    
+    packagingOptions {
+            resources {
+                excludes += [
+                    "META-INF/kotlinx_coroutines_core.version",
+                    "META-INF/kotlinx_coroutines_core-jvm.version"
+                ]
+            }
+        }
 }
