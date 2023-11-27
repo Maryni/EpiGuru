@@ -34,6 +34,7 @@ public class SampleWebView : MonoBehaviour
     IEnumerator Start()
     {
         webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();
+        webViewObject.transform.parent = transform;
         webViewObject.Init(
             cb: (msg) =>
             {

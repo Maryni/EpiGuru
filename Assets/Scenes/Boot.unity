@@ -799,7 +799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86951add84efd9048a53e5e71d477c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webview: {fileID: 1840067830}
+  webview: {fileID: 1895267207}
+  webviewGameobject: {fileID: 1840067830}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1245,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2180f47d2671329478517bcba4e75f22, type: 3}
+--- !u!114 &1895267207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7691589085123558998, guid: 2180f47d2671329478517bcba4e75f22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895267206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840067830}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b977fae9c8e7046bbaae5a9afc7f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
